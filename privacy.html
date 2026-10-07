@@ -30,12 +30,13 @@ footer a { display:inline-block; margin:0 18px 8px 0; padding:6px 0; }
 
 <main class="wrap">
   <h1>Warranty Tracker Privacy Policy</h1>
-  <p class="meta">Effective date: September 24, 2026</p>
+  <p class="meta">Effective date: October 7, 2026</p>
   <p>This policy covers the Warranty Tracker app for Android ("Warranty Tracker", "the app"). The app is published on Google Play by Category5 ("we"). To reach us, use the developer contact details on the <a href="https://play.google.com/store/apps/details?id=com.vriea.warrantytracker">Warranty Tracker page in the Google Play Store</a>.</p>
 
   <h2>The short version</h2>
-  <p>Warranty Tracker keeps your ownership records on your phone. There is no Warranty Tracker account and no Warranty Tracker server: we never receive your products, receipts, photos, documents or questions. The app has no ads, no analytics and no in-app purchases.</p>
-  <p>The AI features are optional. They work only after you enter your own Anthropic API key. When you use one, the app sends the specific photo, document or question you chose, directly from your phone to Anthropic's API over an encrypted connection, and shows you the answer. Without a key, every record-keeping feature still works and nothing leaves your phone.</p>
+  <p>Warranty Tracker keeps your ownership records on your phone. There is no Warranty Tracker account and no Warranty Tracker server: we never receive your products, receipts, photos, documents or questions. The app has no ads and no analytics. It offers one optional in-app purchase, "Pro AI", sold through Google Play.</p>
+  <p>The free "Smart" assistant works on your phone without any key: it reads labels and receipts with on-device text recognition and scans barcodes on-device. To fill in product details and check for recalls it can look up a product identifier (a barcode number, brand, model or product name) in three public databases: UPCitemdb, the U.S. CPSC recall database and Wikipedia. Only that identifier is sent, never your photos, documents, purchases or notes.</p>
+  <p>"Pro AI" is an optional one-time purchase. After buying it, you can enter your own Anthropic API key; the app then sends the specific photo, document or question you chose, directly from your phone to Anthropic's API over an encrypted connection, and shows you the answer. Without Pro AI and a key, nothing you store is sent to Anthropic.</p>
 
   <h2>Information we collect</h2>
   <p>None. We do not operate any server the app talks to, and we cannot see who uses the app or anything you store in it.</p>
@@ -47,16 +48,23 @@ footer a { display:inline-block; margin:0 18px 8px 0; padding:6px 0; }
   <h2>Payment cards</h2>
   <p>To look up credit-card purchase benefits, the app asks only for the card issuer and the card's product name (for example "Chase" and "Amazon Prime Visa"). It never asks for a card number, security code, expiry date, bank login or any other financial credential. Please do not type such details into notes or other free-text fields.</p>
 
+  <h2>On-device Smart assistant and public lookups</h2>
+  <p>Text recognition (Google ML Kit) and barcode scanning run entirely on your phone; the photo is not uploaded for this. The parsed details (brand, model, serial number, dates and amounts) stay in your records.</p>
+  <p>When you identify a product or check for recalls, the app may send a product identifier, and nothing else, over HTTPS to: UPCitemdb (api.upcitemdb.com) to look up a barcode number; the U.S. Consumer Product Safety Commission recall API (saferproducts.gov) to search recalls by product name or model; and Wikipedia (en.wikipedia.org) to find background on the product name. These services receive the identifier and your device's IP address as part of the request, under their own privacy policies. The links to their results are saved with your product as sources. Standard manufacturer warranty terms come from a table bundled inside the app.</p>
+
+  <h2>Pro AI purchase</h2>
+  <p>Pro AI is a one-time in-app product bought through Google Play. Google processes the payment under its own terms and privacy policy; we never receive your payment details. The app keeps a record of the Google Play purchase on your phone so that Pro AI stays unlocked, and "Restore purchases" asks Google Play for it again on a new device or after reinstalling.</p>
+
   <h2>Optional AI features and Anthropic</h2>
-  <p>If you add your own Anthropic API key in Settings, you can use: product identification from a label photo or barcode, receipt and document reading, warranty and card-benefit research (which uses Anthropic's web search tool to find public sources), troubleshooting help and questions to the ownership assistant.</p>
+  <p>After unlocking Pro AI and adding your own Anthropic API key in Settings, you can use Claude for: product identification from a label photo or barcode, receipt and document reading, warranty and card-benefit research (which uses Anthropic's web search tool to find public sources), troubleshooting help and questions to the ownership assistant.</p>
   <p>Each time you start one of these actions, the app sends only what that action needs, directly from your phone to Anthropic, PBC at api.anthropic.com over HTTPS: the photo or document you selected, the text you typed, and the relevant records for the product involved (for example its name, model, purchase date and coverage). For the assistant, it sends a summary of your stored records so that it can answer from them. The request is billed to your own Anthropic account and is handled under Anthropic's terms and privacy policy (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>). We never receive or see these requests.</p>
-  <p>You can remove your key at any time in Settings, after which no AI request can be made.</p>
+  <p>You can remove your key at any time in Settings, after which no request is sent to Anthropic and the free on-device Smart assistant is used instead.</p>
 
   <h2>Permissions</h2>
-  <p><strong>Camera</strong>: used only when you choose to photograph a product label or receipt, or scan a barcode. Pictures you take are saved in the app's private storage as part of the product's record. <strong>Notifications</strong>: used to remind you, on your device, before coverage expires and when registrations or maintenance are due. <strong>Internet</strong>: used only for the optional AI features described above and to open source links you tap.</p>
+  <p><strong>Camera</strong>: used only when you choose to photograph a product label or receipt, or scan a barcode. Pictures you take are saved in the app's private storage as part of the product's record. <strong>Notifications</strong>: used to remind you, on your device, before coverage expires and when registrations or maintenance are due. <strong>Internet</strong>: used only for the product lookups and optional Pro AI features described above, for Google Play purchases, and to open source links you tap. <strong>Google Play billing</strong>: used only to buy or restore Pro AI.</p>
 
   <h2>Sharing and third parties</h2>
-  <p>We do not share any data with anyone, because we do not have any. The only party the app ever sends your data to is Anthropic, and only when you start an AI action with your own key. The app contains no advertising, analytics or tracking software.</p>
+  <p>We do not share any data with anyone, because we do not have any. The app sends data only to: the public lookup services above (a product identifier only); Google Play (the Pro AI purchase); and Anthropic, only when you start a Pro AI action with your own key. The app contains no advertising, analytics or tracking software.</p>
 
   <h2>Exporting and deleting your data</h2>
   <p>You can export everything, or a single product, as JSON, CSV or a PDF report from within the app. To delete everything, open Settings and choose "Delete all data", or uninstall the app. Either permanently removes your records, documents and settings from your phone. There is no copy anywhere else, so there is nothing for us to delete on our side. See also <a href="delete-data.html">how to delete your data</a>.</p>
@@ -66,7 +74,7 @@ footer a { display:inline-block; margin:0 18px 8px 0; padding:6px 0; }
   <p>Coverage information shown by the app is organized from your own documents and from public sources, with a verification label on each item. It is not a guarantee of coverage: the manufacturer, retailer, plan provider or card issuer is the final authority on any claim.</p>
 
   <h2>Children</h2>
-  <p>Warranty Tracker is not directed to children under 13, and we do not knowingly collect information from children. As described above, the app does not collect information from anyone.</p>
+  <p>Warranty Tracker is not directed to children under 13, and we do not knowingly collect information from children. As described above, we do not collect information from anyone.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, the updated version will be published at <a href="https://killashumu.github.io/warrantytracker-privacy/privacy.html">https://killashumu.github.io/warrantytracker-privacy/privacy.html</a> with a new effective date. If a future version of the app handles data differently, this policy will be updated before that version is released.</p>
